@@ -2,13 +2,13 @@
 <!doctype html>
 <html>  
     <head>
-    <title>15th Annual Science Research Session | ASRS-2026</title>
+    <title>14th Annual Science Research Session | ASRS-2025</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <META NAME="DESCRIPTION" CONTENT="15th Annual Science Research Session | ASRS-2026 ">
+        <META NAME="DESCRIPTION" CONTENT="11th Annual Science Research Session | ASRS-2022 ">
 
         
-        <meta name="keywords" content="ASRS 2026,Annual Science Research Session - 2026, South Eastern University Research Conference, SEUSL Science Research Conference, SEU Science Research Conference, Faculty of Applied Sciences, FAS Research Conference, Research, FAS Research Conference">
+        <meta name="keywords" content="ASRS 2022,Annual Science Research Session - 2022, South Eastern University Research Conference, SEUSL Science Research Conference, SEU Science Research Conference, Faculty of Applied Sciences, FAS Research Conference, Research, FAS Research Conference">
         
         <link rel="shortcut icon" href="http://www.seu.ac.lk/favicon.ico" type="image/x-icon" />
         
@@ -47,90 +47,88 @@
 			.hovereffect {
   width: 100%;
   height: 100%;
+  float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: pointer;
-  border-radius: 10%;
+  cursor: default;
 }
 
 .hovereffect .overlay {
   position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(16, 47, 20, 0.65);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
+  overflow:hidden;
+  /*width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;*/
+	width: 60%;
+    height: 80%;
+    left: 20%;
+    top: 12%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 
 .hovereffect:hover .overlay {
   opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .hovereffect img {
   display: block;
-  width: 100%;
   position: relative;
-  -webkit-transition: transform 0.4s ease;
-  transition: transform 0.4s ease;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .hovereffect:hover img {
-  -webkit-transform: scale(1.08);
-  transform: scale(1.08);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
 }
 
 .hovereffect h2 {
+  text-transform: uppercase;
   text-align: center;
   position: relative;
   font-size: 14px;
   background-color: transparent;
   color: #FFF;
-  padding: 0.5em 0;
-  margin: 0;
-  opacity: 1;
-  -webkit-transition: transform 0.4s ease;
-  transition: transform 0.4s ease;
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
-}
-
-.hovereffect:hover h2 {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
 }
 
 .hovereffect a, .hovereffect p {
   color: #FFF;
-  padding: 0.5em 0;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
   opacity: 1;
-  -webkit-transition: transform 0.4s ease;
-  transition: transform 0.4s ease;
-  -webkit-transform: translateY(10px);
-  transform: translateY(10px);
-}
-
-.hovereffect:hover a, .hovereffect:hover p {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-@media (max-width: 767px) {
-  .hovereffect {
-    max-width: 200px;
-    margin: 0 auto;
-  }
-}
-
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+	}
+	
 	.blink {
         animation: blink-animation 1s steps(5, start) infinite;
         -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -144,13 +142,14 @@
         to {
           visibility: hidden;
         }
-      }
-
-      .mark {
+		  
+		  .mark { 
   background-color: royalblue;
   color: black;
 }
-</style>
+
+	
+}</style>
 			
 <!-- modal-->
 
@@ -158,7 +157,6 @@
 	$(document).ready(function(){
 		$(".but").click(function(){
         $("#myModal").modal("show");
-		});
 	});
 </script>
 <!-- end modal -->
@@ -191,6 +189,7 @@
                       });
                     });
                   </script>
+                  </script>
                 <div class="slider">
                     <div class="callbacks_container">
                       <ul class="rslides" id="slider">
@@ -215,14 +214,14 @@
             <div class="container wrapbot" id="page-frame">
                 <div class="about-para">
 					<br><br>
-					<h4 style="color:#003">THE 15<sup>TH</sup> ANNUAL SCIENCE RESEARCH SESSION 2026</h4>
-                    <h3 style="color:#003" class="box">Theme: "Intelligence Science: Synergizing Innovations for a Sustainable Future"</h3>
+					<h4 style="color:#003">THE 14<sup>TH</sup> ANNUAL SCIENCE RESEARCH SESSION 2025</h4>
+                    <h3 style="color:#003" class="box">Theme: "Next-Gen Solutions: Bridging Science and Sustainability"</h3>
                     <p> </p>
-					<p><strong>8<sup>th</sup> &amp; 9<sup>th</sup> September 2026</strong></p>
+					<p><strong>30<sup>th</sup> October 2025</strong></p>
 					<p><strong>Venue: Virtual/FAS Premises</strong></p>
 <hr>
 <p align="justify" style="font-size:16px;font-weight: 500">
-ASRS 2026 marks the 15th Annual Science Research Session organized by the Faculty of Applied Sciences, South Eastern University of Sri Lanka (SEUSL). As a multidisciplinary research conference, ASRS 2026 serves as a vibrant platform that brings together leading scientists, researchers, academics, and aspiring research students from across the country. It provides an excellent opportunity to share innovative findings, exchange ideas, and foster collaborations across diverse fields of science.
+ASRS 2025 marks the 14th Annual Science Research Session organized by the Faculty of Applied Sciences, South Eastern University of Sri Lanka (SEUSL). As a multidisciplinary research conference, ASRS 2025 serves as a vibrant platform that brings together leading scientists, researchers, academics, and aspiring research students from across the country. It provides an excellent opportunity to share innovative findings, exchange ideas, and foster collaborations across diverse fields of science.
 This year’s proceedings will feature a compilation of peer-reviewed abstracts from participating contributors. Additionally, selected abstracts will be invited to submit full-length articles for publication in the Journal of Science (JSC), offering further recognition and visibility to outstanding research.
 . </p>
 
@@ -234,33 +233,25 @@ This year’s proceedings will feature a compilation of peer-reviewed abstracts 
 				<div class="row" style="background-color: #9c7c4d14; padding: 8px">	<center>
 <h2>Speaker Panel</h2>
 </center><br>
-	<div class="col-md-12" style="text-align:center; margin-bottom: 20px;">
-		<h4 style="border-bottom: 12px solid rgb(63, 107, 69);padding-bottom: 12px;display: inline-block;">Keynote Speakers</h4>
-	</div>
-
-	<div class="col-md-3"></div>
-
-	<div class="col-md-3" style="text-align:center; margin-bottom: 20px;">
+				<div class="col-md-5"></div>
+				
+	<div class="col-md-2">
+	<h4 style="border-bottom: 12px solid rgb(63, 107, 69);padding-bottom: 12px;display: inline-block;">Keynote Speaker</h4><br><br>
     <div class="hovereffect">
-         <img class="img-responsive" src="images/Prof. Gihan Dias.jpeg" alt="" style="border: 1px solid #00000047; border-radius: 10%; width:100%;">
-			<div class="overlay">
-                <h2>Prof. Gihan Dias</h2>
-				<h2 style="font-size: 11px;">Department of Computer Science and Engineering, University of Moratuwa.</h2>
+         <img class="img-responsive rounded-circle" src="images/Nasir Hanifa.jpg" alt="" style="border: 1px solid #00000047; border-radius: 10%;">
+             
+			<div class="overlay" style="width: 100%;height: 80%;right: 70%  top: 12%;">
+                <h2 style="background-color: #b6502940">Prof. Nasir Hanifa </h2>
+				<h2 style="font-size: 10px; background-color: #b6502940">Department of Mathematics and Statistics, College of Science, Sultan Qaboos University, Sultanate of OMAN.</h2>
+				<br><br>
+				<!--<p><a href="https://lk.linkedin.com/in/rohan-samarajiva-39199918">LinkedIn Profile</span></a></p>-->
+				<button href="#myModal" class="btn btn-lg btn-succes but" id="but" data-toggle="modal" style="font-size: 12px">About Keynote Speaker.</button>
             </div>
     </div>
 	</div>
+	
 
-	<div class="col-md-3" style="text-align:center; margin-bottom: 20px;">
-    <div class="hovereffect">
-         <img class="img-responsive" src="images/Prof. (Dr.) R. M. Kapila Tharanga Rathnayaka.png" alt="" style="border: 1px solid #00000047; border-radius: 10%; width:100%;">
-			<div class="overlay">
-                <h2>Prof. (Dr.) R. M. Kapila Tharanga Rathnayaka</h2>
-				<h2 style="font-size: 11px;">Dean of the Faculty of Applied Sciences, Sabaragamuwa University of Sri Lanka, whose expertise lies in Applied Statistics.</h2>
-            </div>
-    </div>
-	</div>
-
-	<div class="col-md-3"></div>
+<div class="col-md-2"></div>
 		</div>				
 				<div class="clearfix"></div>
 		<br>
@@ -274,14 +265,14 @@ This year’s proceedings will feature a compilation of peer-reviewed abstracts 
                         <br/>
 <div class="list-group" style="text-align: left">
 
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Biological Sciences</li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Chemical Sciences </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Computer Science and IT </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Environmental Sciences </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Mathematics and Statistics </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Agricultural Sciences  </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Physical Sciences  </li></br>
-<li class="list-group-item"><span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Science Education  </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Biological Sciences</li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Chemical Sciences </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Computer Science and IT </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Environmental Sciences </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Mathematics and Statistics </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Agricultural Sciences  </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Physical Sciences  </li></br>
+<li class="list-group-item"><span class="glyphicon glyphicon glyphicon-hand-right" aria-hidden="true" style="color:#021A3A"></span> Science Education  </li></br>
 		
 							
 </div>
@@ -294,19 +285,19 @@ This year’s proceedings will feature a compilation of peer-reviewed abstracts 
                         <br/>
                        <div class="list-group">
 							<li class="list-group-item" style="text-align:center;background-color: #545452;color: #dedede;border-top-right-radius: 10px;border-top-left-radius: 10px">Call for Papers</li>
-							<li class="list-group-item" style="font-weight: bold"><strong>20<sup>rd</sup> March 2026</strong></li><br>
+							<li class="list-group-item" style="font-weight: bold"><strong>23<sup>rd</sup>June 2025</strong></li><br>
 							
 							<li class="list-group-item" style="background-color: #545452;color: #dedede;border-top-right-radius: 10px;border-top-left-radius: 10px">Abstract Submission Deadline</li>
-							<li class="list-group-item" style="font-weight: bold" ><p style="color:red"><span class="blink"><strong>30<sup>th</sup> May 2026</strong></span></p></li><br>
+							<li class="list-group-item" style="font-weight: bold" ><p style="color:red"><span class="blink"><strong>30<sup>th</sup> July 2025</strong></span></p></li><br>
 							
 							<li class="list-group-item" style="text-align:center;background-color: #545452;color: #dedede;border-top-right-radius: 10px;border-top-left-radius: 10px">Notification of the acceptance</li>
-							<li class="list-group-item" style="font-weight: bold"><strong>30<sup>th</sup> July 2026</strong></li><br>
+							<li class="list-group-item" style="font-weight: bold"><strong>20<sup>th</sup> October 2025</strong></li><br>
 							
 							<li class="list-group-item" style="text-align:center;background-color: #545452;color: #dedede;border-top-right-radius: 10px;border-top-left-radius: 10px">Registration and Camera-ready copy Submission Deadline</li>
-							<li class="list-group-item" style="font-weight: bold"><strong>15<sup>th</sup> August 2026</strong></li><br>
+							<li class="list-group-item" style="font-weight: bold"><strong>24<sup>th</sup> October 2025</strong></li><br>
 							
 							<li class="list-group-item" style="text-align:center;background-color: #545452;color: #dedede;border-top-right-radius: 10px;border-top-left-radius: 10px"> Conference</li>
-							<li class="list-group-item" style="font-weight: bold"><strong>8<sup>th</sup> &amp; 9<sup>th</sup> September 2026</strong></li><br>
+							<li class="list-group-item" style="font-weight: bold"><strong><strong>30<sup>th</sup> October 2025</strong></li><br>
 							<!--<li class="list-group-item" style="text-align:center;font-size: 22px"> Submition Guidelines >>></li>-->
 								<br>
 								
@@ -314,31 +305,38 @@ This year’s proceedings will feature a compilation of peer-reviewed abstracts 
 						 
 
                         </div>
+                        
+                        
+                        
+                        
+                    </div>
                     <div class="col-md-4 grid rgt">
-                        <h4 id="hbox" style="background-color:rgb(16, 47, 20);color:#e3f7e7;border: none;border-bottom: none">General Info</h4></br>
+                        <h4 id="hbox" style="background-color:rgb(16, 47, 20);color:#e3f7e7;border: none;border-bottom: none">General Info.</h4></br>
                         
                         <br/>
                         <div class="list-group">
- <!--<li class="list-group-item" style="text-align:left">Web : <a href="http://www.seu.ac.lk/asrs2024">http://www.seu.ac.lk/asrs2026</a></li>-->
+ <!--<li class="list-group-item" style="text-align:left">Web : <a href="http://www.seu.ac.lk/asrs2024">http://www.seu.ac.lk/asrs2025</a></li>-->
  
-  <li class="list-group-item" style="text-align:left">Submission Guidelines: <a href="downloads/Extended_Abstract_Template_ASRS_2026.docx">Download Here </a></li></br>
- <li class="list-group-item" style="text-align:left">Camera-Ready Submission Guidelines: <a href="downloads/CameraReadyTemplate_2026.docx">Download Here </a></li></br>
+  <li class="list-group-item" style="text-align:left">Submission Guidelines: <a href="downloads/Extended_Abstract_Template_ASRS_2025.docx">Download Here </a></li></br>
+ <li class="list-group-item" style="text-align:left">Camera-Ready Submission Guidelines: <a href="downloads/CameraReadyTemplate_2025.docx">Download Here </a></li></br>
  <!--<li class="list-group-item" style="text-align:left">Conference Registration: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqwZwi1GWlSGipCyekIxdm7VJrzHBooCVDGTqC7Bd9mwNebw/viewform?usp=header
 ">Register Here >></a></li></br>-->
-   <li class="list-group-item" style="text-align:left">Camera-Ready Abstract Submission: <a href="https://cmt3.research.microsoft.com/ASRS2026/Submission/Index">Submit Here </a></li></br>
+   <li class="list-group-item" style="text-align:left">Camera-Ready Abstract Submission: <a href="https://cmt3.research.microsoft.com/ASRS2025/Submission/Index">Submit Here </a></li></br>
  
    <li class="list-group-item" style="text-align:left">Conference Registration: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqwZwi1GWlSGipCyekIxdm7VJrzHBooCVDGTqC7Bd9mwNebw/viewform?usp=header
 ">Register Here</a></li></br>
  
-  <li class="list-group-item" style="text-align:left">E-mail: <a href="mailto:asrs2026@seu.ac.lk">asrs2026@seu.ac.lk</a></li></br>
+  <li class="list-group-item" style="text-align:left">E-mail: <a href="mailto:asrs2025@seu.ac.lk">asrs2025@seu.ac.lk</a></li></br>
  <li class="list-group-item" style="text-align:left">Secretary: (+94) 71 100 5701</li></br>
  <li class="list-group-item" style="text-align:left">Coordinator: (+94) 74 331 6661</li></br></br>
+ 
+</li>
     
                         
 						<br>
 						<div style="border: 2px solid #00000033;background-color:#7B4142;padding: 10px;text-align: center;border-radius: 10px">
 							
-						<a href="https://cmt3.research.microsoft.com/ASRS2026/Submission/Index"><span style="font-size: 18px;font-weight: bold;color: #e0e7ec">&lt;&lt;  Submit Abstract </span></a></br>
+						<a href="https://cmt3.research.microsoft.com/ASRS2025/Submission/Index"><span style="font-size: 18px;font-weight: bold;color: #e0e7ec">&lt;&lt;  Submit Abstract </span></a></br>
 							
 						</div><br></br></br>
 <div style="border: 2px solid #00000033;background-color:#7B4142;padding: 10px;text-align: center;border-radius: 10px">
@@ -387,5 +385,4 @@ This year’s proceedings will feature a compilation of peer-reviewed abstracts 
            
             
     </body>
-</html>
 
